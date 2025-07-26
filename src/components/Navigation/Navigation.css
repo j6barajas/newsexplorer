@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.navigation__home {
+  margin: 0;
+  font-family: "Roboto Medium";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.navigation__button_type_sign-in {
+  width: 176px;
+  height: 48px;
+  font-family: "Roboto Medium";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 100px;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+}

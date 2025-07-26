@@ -1,0 +1,38 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+  max-width: 1440px;
+  max-height: 624px;
+  padding: 80px 216px 80px 104px;
+  background-color: white;
+}
+
+.about__image {
+  max-width: 464px;
+  max-height: 464px;
+  border-radius: 1000px;
+}
+
+.about__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 51px;
+}
+
+.about__heading {
+  margin: 0;
+  font-family: "Roboto Slab Regular";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+}
+
+.about__paragraph {
+  margin: 0;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
