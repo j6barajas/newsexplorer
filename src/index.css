@@ -14,3 +14,8 @@
   font-family: "Roboto Slab Regular";
   src: url(./assets/roboto-slab-400-regular.woff) format("woff");
 }
+
+@font-face {
+  font-family: "Roboto Slab Bold";
+  src: url(./assets/roboto-slab-700.woff) format("woff");
+}

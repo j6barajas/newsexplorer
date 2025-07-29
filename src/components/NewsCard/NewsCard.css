@@ -1,0 +1,87 @@
+.card {
+  max-width: 400px;
+  height: 576px;
+  position: relative;
+  border-radius: 25px;
+  border-collapse: separate;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card__header {
+  max-width: 400px;
+  height: 272px;
+  background-image: url(../../assets/header-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card__image {
+  max-width: 400px;
+  height: 272px;
+}
+
+.card__button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-image: url(../../assets/bookmark.svg);
+  background-color: #fff;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.5s linear;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+}
+
+.card__button:hover {
+  background-image: url(../../assets/bookmark-hover.svg);
+}
+
+.card__date {
+  margin: 0;
+  font-family: "Roboto Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+  padding: 20px 24px 0px 24px;
+}
+
+.card__title {
+  margin: 0;
+  font-family: "Roboto Slab Regular";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1a1b22;
+  padding: 12px 24px 0 24px;
+}
+
+.card__paragraph {
+  margin: 0;
+  font-family: "Roboto Regular";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1a1b22;
+  padding-top: 16px;
+  padding: 16px 24px 0 24px;
+}
+
+.card__source {
+  margin: 0;
+  font-family: "Roboto Slab Bold";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #b6bcbf;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}

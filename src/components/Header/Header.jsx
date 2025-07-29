@@ -1,6 +1,5 @@
 import "./Header.css";
 import logoWhite from "../../assets/logo-white.svg";
-import headerBackground from "../../assets/header-background.svg";
 import Navigation from "../Navigation/Navigation";
 import SearchForm from "../SearchForm/SearchForm";
 
