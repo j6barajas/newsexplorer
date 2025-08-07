@@ -1,10 +1,10 @@
 import "./About.css";
-import aboutPicture from "../../assets/about-image.jpg";
+import aboutImage from "../../assets/about-image.jpg";
 
 function About() {
   return (
     <div className="about">
-      <img className="about__image" src={aboutPicture} />
+      <img className="about__image" src={aboutImage} />
       <div className="about__text-container">
         <h2 className="about__heading">About the author</h2>
         <p className="about__paragraph">

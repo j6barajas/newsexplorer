@@ -11,6 +11,11 @@
 }
 
 @font-face {
+  font-family: "Roboto Bold";
+  src: url(./assets/roboto-900.woff) format("woff");
+}
+
+@font-face {
   font-family: "Roboto Slab Regular";
   src: url(./assets/roboto-slab-400-regular.woff) format("woff");
 }
@@ -18,4 +23,9 @@
 @font-face {
   font-family: "Roboto Slab Bold";
   src: url(./assets/roboto-slab-700.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url(./assets/inter-400-regular.woff) format("woff");
 }

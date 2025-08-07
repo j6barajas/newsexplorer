@@ -4,7 +4,11 @@
   gap: 42px;
 }
 
-.navigation__home {
+.navigation__link {
+  text-decoration: none;
+}
+
+.navigation__text {
   margin: 0;
   font-family: "Roboto Medium";
   font-weight: 500;
@@ -13,7 +17,14 @@
   color: #ffffff;
 }
 
-.navigation__button_type_sign-in {
+.navigation__container {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  padding-left: 28px;
+}
+
+.navigation__button {
   width: 176px;
   height: 48px;
   font-family: "Roboto Medium";
@@ -25,4 +36,28 @@
   color: white;
   background-color: transparent;
   cursor: pointer;
+}
+
+.navigation__button_type_logout {
+  padding: 12px 15px 12px 19px;
+  width: fit-content;
+  display: flex;
+  gap: 12px;
+}
+
+.navigation__logout-image {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__home {
+    font-size: 16px;
+  }
+
+  .navigation__button {
+    width: 152px;
+    height: 40px;
+    font-size: 16px;
+  }
 }
