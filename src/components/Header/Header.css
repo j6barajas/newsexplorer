@@ -9,16 +9,8 @@
 }
 
 .header__menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 30px 104px 26px;
   border-bottom: 1px solid #c4c4c4;
-}
-
-.header__logo {
-  height: 24px;
-  width: 200px;
 }
 
 .header__text {

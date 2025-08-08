@@ -7,7 +7,6 @@ function Header({ onLoginClick, userData, isLoggedIn, handleLogOut }) {
   return (
     <header className="header">
       <div className="header__menu">
-        <img className="header__logo" src={logoWhite} alt="NewsExplorer logo" />
         <Navigation
           onLoginClick={onLoginClick}
           userData={userData}

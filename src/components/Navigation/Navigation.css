@@ -1,5 +1,18 @@
 .navigation {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+}
+
+.navigation__logo {
+  height: 24px;
+  width: 200px;
+}
+
+.navigation__links {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 42px;
 }
