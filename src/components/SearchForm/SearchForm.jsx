@@ -1,13 +1,13 @@
 import "./SearchForm.css";
 import { useState } from "react";
 
-function SearchForm() {
-  const [inputValue, setInputValue] = useState("");
+function SearchForm({ onSearchSubmit }) {
+  const [keyword, setKeyword] = useState("");
   const [error, setError] = useState("");
 
   const handleInputChange = (e) => {
     const value = e.target.value;
-    setInputValue(value);
+    setKeyword(value);
     if (!value.trim()) {
       setError("Please enter a keyword.");
     } else {
@@ -15,17 +15,24 @@ function SearchForm() {
     }
   };
 
+  const handleFormSubmit = (evt) => {
+    evt.preventDefault();
+    onSearchSubmit(keyword);
+  };
+
   return (
-    <form className="searchform">
+    <form onSubmit={handleFormSubmit} className="searchform">
       <input
         type="text"
-        value={inputValue}
+        value={keyword}
         className="searchform__input"
         placeholder="Enter topic"
         onChange={handleInputChange}
       ></input>
       {error && <p className="searchform__error">{error}</p>}
-      <button className="searchform__button">Search</button>
+      <button type="submit" className="searchform__button">
+        Search
+      </button>
     </form>
   );
 }

@@ -1,5 +1,5 @@
 import "./About.css";
-import aboutImage from "../../assets/about-image.jpg";
+import aboutImage from "../../assets/images/about-image.jpg";
 
 function About() {
   return (

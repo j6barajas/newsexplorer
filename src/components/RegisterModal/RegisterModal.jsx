@@ -1,7 +1,6 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import CurrentUserContext from "../../contexts/CurrentUserContext";
 import { useState, useEffect, useContext } from "react";
-import { register } from "../../utils/api";
+import { register } from "../../utils/auth";
 
 function RegisterModal({
   isOpen,
@@ -15,8 +14,6 @@ function RegisterModal({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-
-  const currentUser = useContext(CurrentUserContext);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);

@@ -1,5 +1,4 @@
 import "./ModalWithForm.css";
-import CurrentUserContext from "../../contexts/CurrentUserContext";
 import { useContext } from "react";
 
 function ModalWithForm({

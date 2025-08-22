@@ -2,7 +2,7 @@ import "./LoginModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 // import CurrentUserContext from "../../contexts/CurrentUserContext";
 import { useState, useEffect, useContext } from "react";
-import { login, getCurrentUser } from "../../utils/api";
+import { login, getCurrentUser } from "../../utils/auth";
 
 function LoginModal({
   isOpen,
@@ -32,7 +32,6 @@ function LoginModal({
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     setError(emailRegex.test(email) ? null : "Invalid email address.");
     login(email, password).then((res) => {
-      localStorage.setItem("jwt");
       getCurrentUser(res.token).then((user) => {
         setUserData(user);
         setActiveModal("");

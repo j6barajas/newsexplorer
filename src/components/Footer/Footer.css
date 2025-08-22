@@ -1,16 +1,15 @@
 .footer {
   max-width: 1440px;
-  max-height: 80px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 524px;
   background-color: white;
 }
 
 .footer__text {
   margin: 0;
-  padding: 32px 0 26px 104px;
+  padding: 32px 0px 26px 104px;
   color: #b6bcbf;
   font-family: "Roboto Regular";
   font-size: 16px;
@@ -30,6 +29,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
+}
+
+.footer__link {
+  text-decoration: none;
 }
 
 .footer__link {
@@ -53,4 +56,51 @@
 .footer__logo {
   height: 24px;
   width: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    gap: 113px;
+    height: 176px;
+  }
+  .footer__text {
+    padding: 0px 0px 18px 40px;
+  }
+
+  .footer__container {
+    padding-bottom: 18px;
+  }
+
+  .footer__logos {
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer {
+    flex-direction: column-reverse;
+    gap: 38px;
+    padding: 20px 16px;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .footer__container {
+    padding-bottom: 0px;
+    width: 100%;
+  }
+
+  .footer__text {
+    padding: 0;
+  }
+
+  .footer__logos {
+    padding: 0;
+    align-items: flex-start;
+    height: 100%;
+  }
 }

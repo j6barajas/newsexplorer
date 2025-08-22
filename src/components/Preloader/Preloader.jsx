@@ -1,9 +1,10 @@
 import "./Preloader.css";
 
-function Preloader() {
+function Preloader({ isLoading }) {
   return (
-    <div className="preloader__circle">
-      <p className="preloader__text"></p>
+    <div className="preloader">
+      <div className="preloader__circle"></div>
+      <p className="preloader__text">Searching for news...</p>
     </div>
   );
 }
