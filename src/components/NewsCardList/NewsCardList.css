@@ -61,7 +61,13 @@
 }
 
 @media screen and (max-width: 540px) {
+  .card-list {
+    padding: 32px 16px 24px;
+  }
   .card-list__cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import Main from "../Main/Main";
@@ -35,11 +35,11 @@ function App() {
     }
   };
 
-  const handleOverlayClose = (evt) => {
-    if (evt.target.className.contains("modal_opened")) {
-      handleCloseModal(evt.target);
-    }
-  };
+  // const handleOverlayClose = (evt) => {
+  //   if (evt.target.className.contains("modal_opened")) {
+  //     handleCloseModal(evt.target);
+  //   }
+  // };
 
   const handleLoginClick = () => {
     setActiveModal("login");
@@ -66,8 +66,31 @@ function App() {
       });
   };
 
+  useEffect(() => {
+    const handleKeyDown = (evt) => {
+      if (evt.key === "Escape") {
+        handleCloseModal();
+      }
+    };
+
+    const handleOverlayClose = (evt) => {
+      if (evt.target.classList.contains("modal_opened")) {
+        handleCloseModal();
+      }
+    };
+
+    if (activeModal === "login" || activeModal === "register") {
+      document.addEventListener("keydown", handleKeyDown);
+      document.addEventListener("mousedown", handleOverlayClose);
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("mousedown", handleOverlayClose);
+    };
+  }, [activeModal, handleCloseModal]);
+
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="page">
         <div className="page__content">
           <Routes>
@@ -104,7 +127,6 @@ function App() {
           isOpen={activeModal === "login"}
           activeModal={activeModal}
           handleCloseModal={handleCloseModal}
-          handleOverlayClose={handleOverlayClose}
           onSwitchClick={handleSwitchClick}
           setIsLoggedIn={setIsLoggedIn}
           setActiveModal={setActiveModal}
@@ -121,7 +143,7 @@ function App() {
         />
         <ModalWithForm />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

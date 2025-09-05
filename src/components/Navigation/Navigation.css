@@ -117,6 +117,10 @@
   height: 24px;
 }
 
+.navigation__menu-button_saved-news {
+  background-image: url(../../assets/images/navbar-icon-black.svg);
+}
+
 @media screen and (max-width: 768px) {
   .navigation {
     padding: 0 40px;
@@ -169,10 +173,13 @@
     width: 100vw;
     top: 0;
     left: 0;
-    height: 260px;
-    /* gap: 24px; */
+    height: 350px;
     justify-content: center;
     align-items: flex-start;
+  }
+
+  .navigation__links_open-saved-news {
+    background-color: #c4c4c4;
   }
 
   .navigation__link_active_white {
@@ -188,13 +195,13 @@
   .navigation__button {
     font-size: 18px;
     height: 56px;
-    margin: 0px 16px;
+    margin: 30px 16px 0px;
     width: 90%;
   }
 
   .navigation__text {
     padding-left: 16px;
-    padding-top: 16px;
+    margin-top: 32px;
     font-size: 18px;
   }
 

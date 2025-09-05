@@ -26,6 +26,12 @@ function Navigation({ onLoginClick, isLoggedIn, userData, onLogOut }) {
   const conditionalButton = homePage
     ? "navigation__button navigation__button_type_logout"
     : "navigation__button navigation__button_type_saved-news";
+  const conditionalMenuButton = homePage
+    ? "navigation__menu-button"
+    : "navigation__menu-button navigation__menu-button_saved-news";
+  const conditionalNavMenu = homePage
+    ? "navigation__links_open"
+    : "navigation__links_open navigation__links_open-saved-news";
   const conditionalLogoutImage = homePage ? logoutWhite : logoutBlack;
   const activeHomeLink = homePage
     ? "navigation__link navigation__link_active_white"
@@ -39,9 +45,7 @@ function Navigation({ onLoginClick, isLoggedIn, userData, onLogOut }) {
         <p className={conditionalLogo}>NewsExplorer</p>
       </Link>
       <div
-        className={`navigation__links ${
-          isMobileOpen && "navigation__links_open"
-        }`}
+        className={`navigation__links ${isMobileOpen && conditionalNavMenu}`}
       >
         <Link to="/" className={activeHomeLink}>
           <p className={conditionalText}>Home</p>
@@ -69,7 +73,7 @@ function Navigation({ onLoginClick, isLoggedIn, userData, onLogOut }) {
       </div>
       <button
         onClick={toggleMobileMenu}
-        className="navigation__menu-button"
+        className={conditionalMenuButton}
       ></button>
     </nav>
   );

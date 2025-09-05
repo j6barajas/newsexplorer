@@ -7,7 +7,6 @@ import { login, getCurrentUser } from "../../utils/auth";
 function LoginModal({
   isOpen,
   handleCloseModal,
-  handleOverlayClose,
   activeModal,
   onSwitchClick,
   setIsLoggedIn,
@@ -49,7 +48,6 @@ function LoginModal({
     <ModalWithForm
       isOpen={isOpen}
       handleCloseModal={handleCloseModal}
-      handleOverlayClose={handleOverlayClose}
       activeModal={activeModal}
       buttonText="Sign in"
       title="Sign in"

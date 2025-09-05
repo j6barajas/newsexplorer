@@ -104,6 +104,8 @@
     position: static;
     max-width: 256px;
     height: 56px;
-    padding: 16px 116px;
+    padding: 16px 144px;
+    display: flex;
+    justify-content: center;
   }
 }

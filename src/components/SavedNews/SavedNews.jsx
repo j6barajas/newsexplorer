@@ -22,9 +22,9 @@ function SavedNews({
       <div className="saved-news__text">
         <h2 className="saved-news__subheading">Saved articles</h2>
         <h1 className="saved-news__heading">
-          {userData.username}, you have 5 saved articles
+          {userData.username}, you have 6 saved articles
         </h1>
-        <p className="saved-news__keywords">By keywords: </p>
+        {/* <p className="saved-news__keywords">By keywords: </p> */}
       </div>
       <NewsCardList
         userData={userData}

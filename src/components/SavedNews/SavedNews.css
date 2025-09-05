@@ -33,4 +33,29 @@
 }
 
 @media screen and (max-width: 768px) {
+  .saved-news__text {
+    padding: 24px 0px 32px 40px;
+  }
+  .saved-news__subheading {
+    font-size: 14px;
+    padding-bottom: 16px;
+  }
+  .saved-news__heading {
+    font-size: 30px;
+    line-height: 34px;
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .saved-news__text {
+    padding: 8px 16px 32px;
+  }
+  .saved-news__subheading {
+    font-size: 12px;
+  }
+  .saved-news__heading {
+    font-size: 30px;
+    line-height: 34px;
+  }
 }

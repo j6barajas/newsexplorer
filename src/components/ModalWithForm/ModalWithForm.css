@@ -130,3 +130,22 @@
 .modal__switch {
   color: #2f71e5;
 }
+
+@media screen and (max-width: 540px) {
+  .modal__content {
+    padding: 16px;
+  }
+
+  .modal__close-button {
+    top: -46px;
+    right: 16px;
+  }
+
+  .modal__label {
+    margin-top: 18px;
+  }
+
+  .modal__submit {
+    margin-top: 23px;
+  }
+}

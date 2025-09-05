@@ -2,8 +2,12 @@ import "./NewsCardList.css";
 
 import NewsCard from "../NewsCard/NewsCard";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function NewsCardList({ articles, hasError, isLoggedIn }) {
+  const location = useLocation();
+  const homePage = location.pathname === "/";
+
   const [articleNumber, setArticleNumber] = useState(3);
 
   const handleShowMore = () => {
@@ -12,7 +16,7 @@ function NewsCardList({ articles, hasError, isLoggedIn }) {
 
   return (
     <div className="card-list">
-      <h2 className="card-list__title">Search results</h2>
+      {homePage && <h2 className="card-list__title">Search results</h2>}
       <ul className="card-list__cards">
         {articles?.slice(0, articleNumber).map((article, index) => (
           <NewsCard
