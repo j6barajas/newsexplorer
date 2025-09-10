@@ -21,7 +21,7 @@
 }
 
 .searchform__input:focus {
-  outline: none;
+  outline: 1px solid #2f71e5;
 }
 
 .searchform__input::placeholder {

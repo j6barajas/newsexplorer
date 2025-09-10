@@ -9,7 +9,7 @@ function Footer() {
       <p className="footer__text">© 2025 Supersite, Powered by News API</p>
       <div className="footer__container">
         <div className="footer__links">
-          <Link to="/" className="footer__link">
+          <Link to="/" className="footer__router-link">
             <p className="footer__link">Home</p>
           </Link>
           <a className="footer__link" href="https://tripleten.com/">

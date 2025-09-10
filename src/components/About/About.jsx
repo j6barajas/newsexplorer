@@ -4,7 +4,11 @@ import aboutImage from "../../assets/images/about-image.jpg";
 function About() {
   return (
     <div className="about">
-      <img className="about__image" src={aboutImage} />
+      <img
+        className="about__image"
+        src={aboutImage}
+        alt="Image of developer, Jesús Barajas"
+      />
       <div className="about__text-container">
         <h2 className="about__heading">About the author</h2>
         <p className="about__paragraph">

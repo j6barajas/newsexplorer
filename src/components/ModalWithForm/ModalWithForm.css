@@ -83,7 +83,7 @@
 }
 
 .modal__input:focus {
-  outline: none;
+  outline: 1px solid #2f71e5;
 }
 
 .modal__input::placeholder {

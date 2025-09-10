@@ -2,7 +2,6 @@ import "./SavedNews.css";
 
 import Navigation from "../Navigation/Navigation";
 import NewsCardList from "../NewsCardList/NewsCardList";
-import Footer from "../Footer/Footer";
 
 function SavedNews({
   isLoggedIn,
@@ -31,7 +30,6 @@ function SavedNews({
         articles={articles}
         isLoggedIn={isLoggedIn}
       />
-      <Footer />
     </div>
   );
 }

@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
+import Header from "../Header/Header";
 import Main from "../Main/Main";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import SavedNews from "../SavedNews/SavedNews";
 import { getNewsCards } from "../../utils/api";
+import Footer from "../Footer/Footer";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,12 +36,6 @@ function App() {
       setActiveModal("login");
     }
   };
-
-  // const handleOverlayClose = (evt) => {
-  //   if (evt.target.className.contains("modal_opened")) {
-  //     handleCloseModal(evt.target);
-  //   }
-  // };
 
   const handleLoginClick = () => {
     setActiveModal("login");
@@ -92,26 +88,32 @@ function App() {
   return (
     <HashRouter>
       <div className="page">
-        <div className="page__content">
-          <Routes>
-            <Route
-              path="/"
-              element={
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="page__content">
+                <Header
+                  onLoginClick={handleLoginClick}
+                  handleLogOut={handleLogOut}
+                  userData={userData}
+                  handleSearchSubmit={handleSearchSubmit}
+                  isLoggedIn={isLoggedIn}
+                />
                 <Main
                   isLoggedIn={isLoggedIn}
                   isSearched={isSearched}
                   isLoading={isLoading}
                   articles={articles}
-                  onLoginClick={handleLoginClick}
-                  handleLogOut={handleLogOut}
-                  userData={userData}
-                  handleSearchSubmit={handleSearchSubmit}
                 />
-              }
-            />
-            <Route
-              path="/saved-news"
-              element={
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/saved-news"
+            element={
+              <div className="page__content">
                 <SavedNews
                   isLoggedIn={isLoggedIn}
                   articles={articles}
@@ -119,10 +121,11 @@ function App() {
                   handleLogOut={handleLogOut}
                   userData={userData}
                 />
-              }
-            />
-          </Routes>
-        </div>
+                <Footer />
+              </div>
+            }
+          />
+        </Routes>
         <LoginModal
           isOpen={activeModal === "login"}
           activeModal={activeModal}
