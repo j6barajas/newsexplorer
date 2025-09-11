@@ -1,0 +1,30 @@
+.nothing-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 86px 0px 80px;
+}
+
+.nothing-found__image {
+  width: 82.5px;
+  height: 82.5px;
+}
+
+.nothing-found__heading {
+  margin: 0;
+  padding-top: 31.5px;
+  font-family: "Roboto Slab Regular";
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.nothing-found__text {
+  margin: 0;
+  padding-top: 16px;
+  font-family: "Roboto Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+}

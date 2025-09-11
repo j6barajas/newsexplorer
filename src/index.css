@@ -1,0 +1,31 @@
+@import url(./vendor/normalize.css);
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url(./assets/fonts/roboto-500.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url(./assets/fonts/roboto-400-regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url(./assets/fonts/roboto-900.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Slab Regular";
+  src: url(./assets/fonts/roboto-slab-400-regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Slab Bold";
+  src: url(./assets/fonts/roboto-slab-700.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url(./assets/fonts/inter-400-regular.woff) format("woff");
+}
